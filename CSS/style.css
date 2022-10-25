@@ -1,0 +1,103 @@
+body{
+    background-color:rgb(247, 247, 247);
+}
+
+title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:  100px;
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 45px;
+}
+
+h2{
+    font-family:'Times New Roman', Times, serif;
+}
+
+<!--MENU DESPLEGABLE-->
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/*menu*/
+
+header{
+   
+	width: 100%;
+    text-align: center;
+}
+
+.navegacion{
+	width: 12334x;
+	margin: 30px auto;
+	background:#dad7d78e;
+}
+
+.navegacion ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: #000000;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li a:hover{
+	color: #CE7D35;
+	transition: all .3s;
+}
+
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+	background: #dad7d78e;
+	width: 120%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: rgb(5, 5, 5);
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+} 
+
+/*FOOTER*/
+footer {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   
+    font-size: 20px;
+    
+     padding: 25px;
+     background-color: rgb(rgb(192, 171, 79));
+    text-align: center;
+   
+}
