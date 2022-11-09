@@ -6,9 +6,10 @@ const exphbs = require('express-handlebars');
 
 // Inicializacion
 const app = express();
+require ('./database');
 
 //Configuraciones
-app.set('port',3000);
+app.set('port',process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs.engine({
     defaultLayout: 'main',
