@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY</title>
+    <link rel="stylesheet" href="CSS/carrusel.css">
+</head>
+<body>
+    <!-- Imagenes predeterminadas -->
+    <div id="drag">
+        <div id="spin">
+            <img src="Imagenes/images9.jpg" alt="">
+            <img src="Imagenes/images10.jpg" alt="">
+            <img src="Imagenes/images11.jpg" alt="">
+            <img src="Imagenes/images12.jpg" alt="">
+            <img src="Imagenes/images13.jpg" alt="">
+            <img src="Imagenes/images14.jpg" alt="">
+            <img src="Imagenes/images15.jpg" alt="">
+            
+            <img src="Imagenes/images16.jpg" alt="">
+            <img src="Imagenes/images17.jpg" alt="">
+            <img src="Imagenes/images18.jpg" alt="">
+            
+        </div>
+        <div id="ground"></div>
+        <a href="file:///C:/Users/linri/Desktop/l/index.html#" class="btn cta-btn">Demostración</a>
+    </div>
+
+    <script>
+        var radius = 500;
+        var autoRotate = true;
+        var rotateSpeed = -60;
+        var imgWidth = 190;
+        var imgHeight = 230;
+
+        setTimeout(init, 1000);
+
+        var odrag = document.getElementById('drag'); /*Obtener elemento por ID*/
+        var ospin = document.getElementById('spin'); /*Obtener elemento por ID*/
+        var aImg = ospin.getElementsByTagName('img'); /*Obtener elemento por nombre de etiqueta*/
+
+        var aEle = [...aImg];
+        ospin.style.width = imgWidth + "px";
+        ospin.style.height = imgHeight + "px";
+
+        var ground = document.getElementById('ground');
+        ground.style.width = radius * 3 + "px";
+        ground.style.height = radius * 3 + "px";
+
+        function init(delayTime){
+            for(var i = 0; i < aEle.length; i++){
+                aEle[i].style.transform = "rotateY(" + (i*(360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
+                aEle[i].style.transition = "transform 1s";
+                aEle[i].style.transitionDelay = delayTime || (aEle.length-i)/4 + "s";
+            }
+        }
+
+        /* Funcion de transformacion */
+        function applyTransform(obj){
+            if(tY > 180) tY = 180;
+            if(tY < 0) tY = 0;
+
+            obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
+        }
+            
+        /* Funcion de giro */
+        function playSpin(yes){
+            ospin.style.animationPlayState = (yes ? 'running' : 'paused');
+        }
+
+        var sX, sY, nX, nY, desX = 0, desY = 0, tX = 0, tY = 10;
+        if(autoRotate){
+            var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
+            ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
+        }
+        /*en puntero hacia abajo*/
+        document.onpointerdown = function(e){
+            clearInterval(odrag.timer);
+            e = e || window.event;
+            var sX = e.clientX,
+                sY = e.clientY;
+        
+                /*movimiento del puntero */
+        this.onpointermove = function(e){
+            e = e || window.event;
+            var nX = e.clientX,
+                nY = e.clientY;
+
+                desX = nX - sX;
+                desY = nY - sY;
+                tX += desX * 0.1;
+                tY += desY * 0.1;
+
+                applyTransform(odrag);
+                sX = nX;
+                sY = nY;
+        }
+        /*en puntero hacia arriba*/
+        this.onpointerup = function(e){
+            odrag.timer = setInterval(function(){
+                desX *= 0.95;
+                desY *= 0.95;
+                tX += desX * 0.1;
+                tY += desY * 0.1;
+
+                applyTransform(odrag);
+
+                playSpin(false);
+                if(Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5){
+                    clearInterval(odrag.timer);
+                    playSpin(true);
+                }
+            },17);
+
+            this.onpointermove = this.onpointerup = null;
+        };
+        return false;
+    }
+    </script>
+</body>
+</html>
