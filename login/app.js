@@ -29,9 +29,9 @@ app.get('/', (req,res) => {
 })
 
 app.get('/success', (req,res) => {
-    res.render('./src/', {name:req.user.displayName, email:req.user.emails[0].value,
+    res.render('pages/profile.ejs', {name:req.user.displayName, email:req.user.emails[0].value,
     pic:req.user.photos[0].value})
-    
+    res.render('./src/')  
 })
 
 app.get('/google',passport.authenticate('google',{scope:['profile','email']  }));
