@@ -6,7 +6,7 @@ const exphbs = require('express-handlebars');
 
 
 const app = express();
-require('./database');
+const database = require('./database');
 
 
 app.set('port', process.env.PORT || 3000);
