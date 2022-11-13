@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node ./src/index.js"
+    "dev": "cross-env NODE_ENV=development nodemon src/ ",
+    "start": "cross-env NODE_ENV=production node src/"
   },
   "keywords": [],
   "author": "",
