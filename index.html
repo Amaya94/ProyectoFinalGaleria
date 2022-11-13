@@ -1,84 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
-    <link rel="stylesheet" href="./CSS/style.CSS">
-   
-    <title>COMPUTER GALLERY</title>
-    <!--favicon-->
-    <link rel="shortcut icon" href="./Imagenes/logo.jpeg">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY COMPUTER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <!-- Menu -->
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
 
- <!--MENU DESPLEGABLE-->
- <header> <center>
-     <!--ICONO-->
-     
-    <nav class="navegacion">
+                <picture class="logo">
+                    <a href="/"><img src="./Imagenes/logo.jpeg" alt="Logo de app"></a>
+                </picture>
 
-        <ul class="menu">
-              <!--ICONO-->
-            <img src="./Imagenes/logo.jpeg" alt="GALLERY COMPUTER" width="100" height="100" > 
-            
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ">Mision</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ">Vision</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ">Valores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="file:///C:/Users/linri/Desktop/l/Editor.html" class="nav-link ">Galerìa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-            <li><a href="index.html">LOGIN</a></li>
-            <li><a href="#">REGISTRARSE</a></li>
-            
-         
-        </ul>
-    </li>
- 
+    <!-- Imagen principal -->
+    <section class="hero" id="hero" data-aos="zoom-in">
+        <div class="container">
+            <h2 class="h2-sub">
+                <span class="fil">B</span>ienvenido
+            </h2>
+            <h1 class="head">GALLERY COMPUTER</h1>
+            <div class="he-des">
+                <a data-aos="fade-up" data-aos-delay="300" href="https://angelescobar-20.github.io/" class="btn cta-btn">LOGIN</a>
+                <a data-aos="fade-up" data-aos-delay="500" href="#" class="btn cta-btn">Registro</a>
+            </div>
+        </div>
+    </section>
 
-</center>
-</ul>
-</nav>
-</header>
- 
+     <!-- Mision -->
+    <section class="dis-sto" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="res-info">
+                <div>
+                    <img src="imagenes/nosotros.jpg" alt="">
+                </div>
 
-     
-      <h1><center> GALLERY COMPUTER </h1></center> </h1>
-      <!-- imagen -->
-      <p><center> <img src="./Imagenes/gallery.jpg" alt="GALLERY COMPUTER" width="1300" height="850"> </center></p>
+                <div class="res-des pad-rig">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">D</span>escubre
+                        </h2>
+                        <h1 class="head hea-dark">Mision</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        Somos una aplicacion de edicion de fotografias de alta calidad,
+                        donde podra realizar con toda facilidad sus ediciones de fotografias.
+                    </p>
+                    <a href="#" class="btn cta-btn">Nosotros</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+         <!-- Segunda imagen principal -->
+    <section class="taste bt" data-aos="zoom-in">
+        <div class="container">
+            <div class="global">
+                <h2 class="h2-sub">
+                    <span class="fil">P</span>ropòsito
+                </h2>
+                <h1 class="head">Logro</h1>
+            </div>
+        </div>
+    </section>
+
+         <!-- Seccion de Vision -->
+    <section class="disco"  data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="res-info">
+                <div class="res-des">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">D</span>escubre
+                        </h2>
+                        <h1 class="head hea-dark">Vision</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        Trabajar desde una gestión horizontal, siendo la trasparencia,
+                        la auto-responsabilidad, la confianza y facilidad de edicion de
+                        fotografias que fundamentan esta app, queremos ser referentes en
+                        cuanto a la comunicación ética y responsable. Colaborando y creando
+                        sugerencias de edicion .
+                    </p>
+                    <a href="#" class="btn cta-btn">Descubre</a>
+                </div>
+                <div class="image-group pad-rig">
+                    <img src="imagenes/images3.jpg" alt="">
+                    <img src="imagenes/images4.jpg" alt="">
+                    <img src="imagenes/images5.jpg" alt="">
+                    <img src="imagenes/images6.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+         <!-- tercera imagen principal -->
+    <section class="pb bt" data-aos="zoom-in">
+        <div class="container">
+            <div class="global">
+                <h2 class="h2-sub">
+                    <span class="fil">P</span>rincipios
+                </h2>
+                <h1 class="head">virtudes</h1>
+            </div>
+        </div>
+    </section>
+
+         <!-- seccion de valores -->
+    <section data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="res-info">
+
+                <div class="image-group">
+                    <img src="imagenes/images1.jpg" alt="">
+                    <img src="imagenes/images7.jpg" alt="">
+                </div>
+                <div class="res-des pad-rig">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">D</span>escubre
+                        </h2>
+                        <h1 class="head hea-dark">Valores</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        1. Responsabilidad en la ediciones de imagenes
+                        2. Eficacia en edicion
+                        3. Posicionarnos en el mercado
+                    </p>
+                    <a href="#" class="btn cta-btn">Descubre nos</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+                 <!-- Cuarta Imangen principal -->
+    <section class="pi bt" data-aos="zoom-in">
+        <div class="container">
+            <div class="global">
+                <h2 class="h2-sub">
+                    <span class="fil">G</span>alería
+                </h2>
+                <h1 class="head">Ilustraciones</h1>
+            </div>
+        </div>
+    </section>
+             <!-- seccion de demostracion de galeria-->
+    <section data-aos="fad-up" data-aos-duration="1000" id="GALLERY">
+        <div class="container">
+            <div class="res-info">
+
+                <div class="image-group">
+                    <img src="imagenes/images19.jpg" alt="">
+                    <img src="imagenes/images20.jpg" alt="">
+                </div>
+                <div class="res-des pad-rig">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">D</span>escubre
+                        </h2>
+                        <h1 class="head hea-dark">Edicion</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        la edicion de fotos es la parte importante 
+                        de nuestra aplicacion.
+                    </p>
+                    <a href="file:///C:/Users/linri/Desktop/l/gallery.html" class="btn cta-btn">Demostración</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
+             <!-- Seccion de Noticias y redes sociales -->
+    <footer data-aos="flip-left">
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-content-about">
+                    <h4>Nosotros</h4>
+                    <div class="circle">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                    <p>Somos una aplicacion lideres en ediciòn, de manera
+                        gratuita pordras editar tus fotos con excelente calidad,
+                        con màs de 30 años de ediciòn.</p>
+                </div>
+                <div class="footer-div">
+                    <div class="social-media">
+                        <h4>Siguenos</h4>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-pinterest"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Noticias</h4>
+                        <form action="" class="news-form">
+                            <input type="text" class="news-input" placeholder="Escribe tu email">
+                            <button class="news-btn" type="submit">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS -->   <!-- seccion de elementos --> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+
+    <script>
+        const selectElement = function (element) {
+            return document.querySelector(element);
+        }
 
 
-      <!--MISION/VISION/OBJETIVOS-->
-    <p ><h1><center>MISION </center></h1></p>
-    <p><h2> Somos una aplicacion de edicion de fotografias de alta calidad, donde podra
-        realizar con toda facilidad sus ediciones de fotografias.  
-       
-         </h2></p>
-         <hr>
-        <br>
+        let menuToggle = selectElement('.menu-toggle');
+        let body = selectElement('body');
 
-         <p><h1><center>VISION  </center></h1></p>
-    <p><h2>Trabajar desde una gestión horizontal, siendo la trasparencia, 
-        la auto-responsabilidad, la confianza y facilidad de edicion de fotografias  
-        que fundamentan esta app, queremos ser referentes en cuanto a
-         la comunicación ética y responsable. Colaborando y creando sugerencias de edicion . 
-         
-         </h2></p>
-        <hr>
-        <br>
-
-        <p><h1><center>VALORES </center></h1></p>
-        <ol><h2> 
-            <li>Responsabilidad en la ediciones de imagenes</li>
-            <li>Eficacia en edicion </li>
-            <li>Posicionarnos en el mercado</li>
-           
-        </ol></h2>
-        <br><br><br>
-        <hr>
-        <br><br><br>
-        <br>
+        menuToggle.addEventListener('click', function () {
+            body.classList.toggle('open');
+        })
+    </script>
 
 
-        <footer>
-            <p id="2">Autora Diseñadora: Diana Victores </p>
-        </footer>
+</body>
 
-    </body>
 </html>
