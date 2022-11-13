@@ -17,10 +17,6 @@
   "bugs": {
     "url": "https://github.com/AngelEsc-2021/login-react/issues"
   },
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon ./src/ ",
-    "start": "cross-env NODE_ENV=production node ./src/"
-  },
 
   "homepage": "https://github.com/AngelEsc-2021/login-react#readme",
   "dependencies": {
