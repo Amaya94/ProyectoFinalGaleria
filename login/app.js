@@ -32,10 +32,15 @@ app.get('/success', (req,res) => {
     res.render('pages/profile.ejs', {name:req.user.displayName, email:req.user.emails[0].value,
     pic:req.user.photos[0].value})
     
-
 })
 
 app.get('/google',passport.authenticate('google',{scope:['profile','email']  }));
+
+app.get('/google/callback', passport.authenticate('google',{successRedirect:'/succes'}),
+    function(req, res) {
+    res.redirect('./src/');
+    }
+);
 
 app.get('/google/callback', passport.authenticate('google',{failureRedirect:'/failed'}),
     function(req, res) {
